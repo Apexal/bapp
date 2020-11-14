@@ -17,8 +17,13 @@
             <section data-background-color="#ff914c" data-background-image="../assets/img/python-logo.png" data-background-size="40%">
                 <h1>Become a Python Programmer</h1>
                 <h2>Day 1</h2>
+
+                <aside class="notes">
+                    Welcome everyone and thank them for joining the class, especially those who've already had class with me.
+                </aside>
             </section>
 
+            <!-- General course overview -->
             <section>
                 <section>
                     <h1>About Course</h1>
@@ -28,34 +33,94 @@
                     <p class="fragment fade-up">What does that even mean?</p>
                 </section>
 
+                <!-- Vertical slides briefly covering each general focus area of the course -->
                 <section>
                     <h4>You'll learn how to...</h4>
-                    <h3>Read Python</h3>
+                    <ul>
+                        <li class="fragment">Read Python</li>
+                        <li class="fragment">Write <em class="fragment highlight-current-green">organized and clean</em> Python</li>
+                        <li class="fragment">Think in Python</li>
+                        <li class="fragment">Keep learning Python</li>
+                    </ul>
                 </section>
-                <section>
-                    <h4>You'll learn how to...</h4>
-                    <h3>Write Python</h3>
-                </section>
+            </section>
 
+            <!-- Self-introduction answering the question "Who am I to teach you all this?" -->
+            <section>
                 <section>
                     <h1>Who am I?</h1>
                     <img src="../assets/img/frank.jpeg" alt="A picture of me, Frank!">
                     <p>
-                        <em class="fragment">Wow what a good looking guy!</em>
+                        <em class="fragment">Who am I to be able to teach you that?</em>
                     </p>
+
+                    <aside class="notes">"Who am I to be able to teach you that?"</aside>
                 </section>
-                
+
+                <section>
+                    <h2>Frank Matranga</h2>
+                    <ul>
+                        <li class="fragment">20 years old</li>
+                        <li class="fragment">oldest of 4 siblings</li>
+                        <li class="fragment">from New York City 🚆</li>
+                        <li class="fragment">study Computer Science in college</li>
+                        <li class="fragment">make cool websites</li>
+                    </ul>
+                </section>
+
+                <!-- Briefly explain GitHub -->
+                <section>
+                    <h2>Open Source Work</h2>
+                    <p>I've created nearly 100 free and open-source projects that anyone in the world can view, copy, or use.</p>
+                    <img src="../assets/img/github.png" alt="A screenshot of my GitHub account!" class="stretch">
+                </section>
+
+                <section>
+                    <h2>Professional Work</h2>
+                    <p>I've worked for Blackstone, the largest alternative investment firm in the world, which handles over $570 billion. </p>
+                    <img src="../assets/img/bxtii.png" alt="">
+                </section>
+
+                <section>
+                    <h2>Teaching Work</h2>
+                    <p>I've taught Computer Science for the past <strong>half decade</strong> since 2015!</p>
+                    <ul class="fragment">
+                        <li>Scratch</li>
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>C++</li>
+                        <li>HTML/CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h1 class="fragment">Let's</h1>
+                <h1 class="fragment">Get</h1>
+                <h1 class="fragment">Started</h1>
+            </section>
+
+            <!-- Justification for learning how to code (not too specific to Python) -->
+            <section>
+                <section>
+                    <h1>Why learn Python?</h1>
+                    <p class="fragment">Besides parents making you...</p>
+                </section>
+
+                <section>stuff</section>
             </section>
         </div>
     </div>
 
     <script src="../dist/reveal.js"></script>
+    <script src="../plugins/notes/notes.js"></script>
     <script>
     // More info about initialization & config:
     // - https://revealjs.com/initialization/
     // - https://revealjs.com/config/
     Reveal.initialize({
-        hash: true
+        hash: true,
+        plugins: [ RevealNotes ]
     });
     </script>
 </body>
