@@ -8,27 +8,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../dist/reset.css">
     <link rel="stylesheet" href="../dist/reveal.css">
-    <link rel="stylesheet" href="../dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="../dist/theme/blood.css" id="theme">
+    <link rel="stylesheet" href="../plugins/highlight/monokai.css">
+
+    <style>
+        :root {
+            --dark-red: #9c2231;
+
+            --question: var(--dark-red);
+        }
+        .dark-red {
+            color: var(--dark-red);
+        }
+    </style>
 </head>
 
 <body>
     <div class="reveal">
         <div class="slides">
-            <section data-background-color="#ff914c" data-background-image="../assets/img/python-logo.png" data-background-size="40%">
-                <h1>Become a Python Programmer</h1>
-                <h2>Day 1</h2>
+            <section data-background-color="#1E2EDE">
+                <h2 style="color: #fff; text-shadow: 2px 2px 2px rgb(31, 30, 30)">Waiting for learners to arrive</h2>
+                <img class="stretch"
+                    src="https://media0.giphy.com/media/l4FGIO2vCfJkakBtC/giphy.gif?cid=ecf05e47p56tfex9tmbocfgy5b86uncmch6pg2sv2hti800z&rid=giphy.gif"
+                    alt="">
+                <p>Answer this in the chat in the meantime: "What's the coolest technology you know of?"</p>
+            </section>
+
+            <section data-background-color="#ff914c" data-background-image="../assets/img/python-logo.png"
+                data-background-size="40%">
+                <h2>Become a Python Programmer</h2>
+                <h3>Day 1</h3>
 
                 <aside class="notes">
-                    Welcome everyone and thank them for joining the class, especially those who've already had class with me.
+                    Welcome everyone and thank them for joining the class, especially those who've already had class
+                    with me.
                 </aside>
             </section>
 
             <!-- General course overview -->
             <section>
                 <section>
-                    <h1>About Course</h1>
+                    <h2>About Course</h2>
                     <blockquote>
-                        <p>"Learn how to properly program in Python in this 8-week course covering the language and software development best practices."</p>
+                        <p>"Learn how to properly program in Python in this 8-week course covering the language and
+                            software development best practices."</p>
                     </blockquote>
                     <p class="fragment fade-up">What does that even mean?</p>
                 </section>
@@ -38,7 +61,8 @@
                     <h4>You'll learn how to...</h4>
                     <ul>
                         <li class="fragment">Read Python</li>
-                        <li class="fragment">Write <em class="fragment highlight-current-green">organized and clean</em> Python</li>
+                        <li class="fragment">Write <em class="fragment highlight-current-green">organized and clean</em>
+                            Python</li>
                         <li class="fragment">Think in Python</li>
                         <li class="fragment">Keep learning Python</li>
                     </ul>
@@ -48,7 +72,7 @@
             <!-- Self-introduction answering the question "Who am I to teach you all this?" -->
             <section>
                 <section>
-                    <h1>Who am I?</h1>
+                    <h2>Who am I?</h2>
                     <img src="../assets/img/frank.jpeg" alt="A picture of me, Frank!">
                     <p>
                         <em class="fragment">Who am I to be able to teach you that?</em>
@@ -71,14 +95,16 @@
                 <!-- Briefly explain GitHub -->
                 <section>
                     <h2>Open Source Work</h2>
-                    <p>I've created nearly 100 free and open-source projects that anyone in the world can view, copy, or use.</p>
+                    <p>I've created nearly 100 free and open-source projects that anyone in the world can view, copy, or
+                        use.</p>
                     <img src="../assets/img/github.png" alt="A screenshot of my GitHub account!" class="stretch">
                 </section>
 
                 <section>
                     <h2>Professional Work</h2>
-                    <p>I've worked for Blackstone, the largest alternative investment firm in the world, which handles over $570 billion. </p>
-                    <img src="../assets/img/bxtii.png" alt="">
+                    <p>I've worked for Blackstone, the largest alternative investment firm in the world, which handles
+                        over $570 billion. </p>
+                    <img src="../assets/img/bxtii.png" alt="Screenshot of BXTII website">
                 </section>
 
                 <section>
@@ -92,12 +118,68 @@
                         <li>HTML/CSS</li>
                         <li>JavaScript</li>
                     </ul>
+
+                    <aside class="notes">But I know a lot more language than listed here!</aside>
                 </section>
             </section>
+
+            <!-- Brief student introductions -->
+            <section data-background-color="var(--question)">
+                <h3>How about you?</h3>
+                <ul>
+                    <li>Name</li>
+                    <li>Age</li>
+                    <li>Any coding experience?</li>
+                </ul>
+                <p></p>
+                <small>Raise your hand to answer or just type in the chat!</small>
+                
+                <aside class="notes">Wait for a few people to answer before moving on. Give time to type.</aside>
+            </section>
+
             <section>
-                <h1 class="fragment">Let's</h1>
-                <h1 class="fragment">Get</h1>
-                <h1 class="fragment">Started</h1>
+                <section data-background-color="#496F5D">
+                    <h3>Course Guidelines</h3>
+                    <p class="fragment">There are too many students to keep everyone unmuted the whole time!</p>
+                    <p class="fragment">If you have a question during class, click "Raise Hand" on Zoom and I will unmute you at a good point.</p>
+                    <p class="fragment">When I ask a question, click "Raise Hand" and I'll unmute a few people to answer.</p>
+                    <p class="fragment">For some questions, I'll just ask you to type in the Zoom chat.</p>
+                </section>
+
+                <section data-background-color="#49516F">
+                    <h3>Zero Tolerance Rules</h3>
+                    <ol>
+                        <li class="fragment">Be kind to everyone. Yes, everyone.</li>
+                        <li class="fragment">Keep the chat on topic.</li>
+                        <li class="fragment">Do not share/send/type/show anything inappropriate to me or the class.</li>
+                    </ol>
+                    <strong class="fragment">These are serious!</strong>
+
+                    <aside class="notes">Rules #1 and #3 are most important and I'll be more lenient with rule #2 of
+                        course.
+                        We all want to share but there's a time and place for everything.</aside>
+                </section>
+
+                <section>
+                    <h2>Slide Colors</h2>
+                    <p>I'll use different slide colors to signal different things...</p>
+                </section>
+
+                <section data-background-color="var(--question)">
+                    <h2>This color means I have a question for you!</h2>
+                </section>
+
+                <section data-background-color="#496F5D">
+                    <h2>This color is for important things!</h2>
+                </section>
+
+                <section data-background-color="var(--question)">
+                    <h2>Any questions?</h2>
+                </section>
+            </section>
+
+            <section>
+                <img src="../assets/img/completely_different.webp" alt="" class="stretch">
             </section>
 
             <!-- Justification for learning how to code (not too specific to Python) -->
@@ -107,21 +189,276 @@
                     <p class="fragment">Besides parents making you...</p>
                 </section>
 
-                <section>stuff</section>
+                <section>
+                    <p>You get almost total control over a computer.</p>
+                    <p class="fragment">You can use this to do nearly anything!</p>
+                </section>
+
+                <section>
+                    <h3>Programs written in Python (or any language) can...</h3>
+                    <ol>
+                        <li class="fragment">help you keep track of your homework</li>
+                        <li class="fragment">help you <em>do</em> your homework</li>
+                        <li class="fragment">create video games</li>
+                        <li class="fragment">make your own website</li>
+                        <li class="fragment">order pizza automatically</li>
+                        <li class="fragment">and a gazillion things more!</li>
+                    </ol>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>What is Python?</h1>
+                </section>
+
+                <section>
+                    <h3>First, what is a programming language?</h3>
+                    <p class="fragment">A programming language is a language in between computer language (101001010)
+                        and natural language (Hello, how are you doing?) that allows us to give commands to a computer.
+                    </p>
+                    <p class="fragment">Type in the chat any programming languages you have heard of!</p>
+                </section>
+
+                <section data-background-color="var(--question)">
+                    <h3>Question</h3>
+                    <h2>Why can't we program in English?</h2>
+
+                    <img src="../assets/img/taxi.jpg" alt="Comic" class="fragment">
+                    <aside class="notes">
+                        <strong>ANSWER:</strong> Natural languages have a level of ambiguity that computers are too dumb
+                        to handle!
+                        A program written in a programming language has one meaning and one meaning only.
+                    </aside>
+                </section>
+
+                <section data-background-color="var(--question)">
+                    <h4>Question</h4>
+                    <h3>Why don't we program in computer language?</h3>
+
+                    <img class="stretch"
+                        src="https://media1.giphy.com/media/gFmkpNCar7TSoauRUs/giphy.gif?cid=ecf05e47nh50m8hhd52pn679a09i6plv9ry49nlp25c1v1cp&rid=giphy.gif"
+                        alt="A binary file">
+                    <aside class="notes">
+                        <strong>ANSWER:</strong> It takes way too long and is really hard to make complex programs with!
+                    </aside>
+                </section>
+
+                <section>
+                    <p>Python is one of the most popular programming languages in the world!</p>
+                    <p class="fragment">It is a good first programming language because it looks a lot like English and
+                        generally has less to type!</p>
+                    <div class="fragment" style="display: flex;">
+                        <pre><code data-trim>
+                        // This is the Go language
+                        package main
+
+                        import "fmt"
+                        
+                        func main() {
+                            fmt.Println("hello world")
+                        }
+                        </code></pre>
+
+                        <pre><code data-trim>
+                        # This is the same program in Python!
+                        print("Hello, world!")
+                        </code></pre>
+                    </div>
+
+                    <aside class="notes">Point out the ugliness of Go and compare it to beautiful Python.</aside>
+                </section>
+                <section data-background-color="var(--question)">
+                    <h4>Question</h4>
+                    <h3>Why are there different programming languages?</h3>
+
+                    <aside class="notes">
+                        Technically, anything you can do in one language can be done in another language.
+                        Some languages run faster than others but are harder to code in, some languages only work on
+                        some devices or platforms,
+                        and some are just preferred by programmers!
+                    </aside>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Using Python</h2>
+
+                    <p>Usually, you have to download and install Python on your own computer to use it. <em class="fragment">Your computer doesn't understand Python on its own!</em></p>
+                    <p class="fragment">If you don't want to/can't install Python, you can do everything inside a website called <a href="https://repl.it">repl.it</a>!</p>
+                </section>
+
+                <section>
+                    <h3>Installing Python 3.9</h3>
+                    <img height="20%" src="../assets/img/python-website.png" alt="">
+                    <a href="https://python.org" target="_blank">
+                    </a>
+                    <a href="https://python.org" target="_blank">python.org</a>
+                </section>
+
+                <section>
+                    <h2>On Windows</h2>
+                    <a target="_blank" href="https://www.python.org/ftp/python/3.9.0/python-3.9.0-amd64.exe">Click here
+                        to download Windows installer</a>
+                </section>
+
+                <section>
+                    <h2>On Mac</h2>
+                    <a target="_blank" href="https://www.python.org/ftp/python/3.9.0/python-3.9.0-macosx10.9.pkg">Click
+                        here to download Mac installer</a>
+                </section>
+
+                <section>
+                    <h4>OR</h4>
+                    <h3>Create a <a href="https://repl.it/signup" target="_blank" rel="noopener noreferrer">repl.it</a>
+                        account</h3>
+                    <a target="_blank" href="https://repl.it/signup">
+                        <img src="../assets/img/replit.png" alt="">
+                    </a>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>The Simplest Python Program</h2>
+                    <pre><code data-trim>
+                    print("Hello, world!")      # display a message on the screen
+                    </code></pre>
+
+                    <aside class="notes">Ask: What does this do? Does it print to my printer?</aside>
+                </section>
+
+                <section>
+                    <h3>Values</h3>
+                    <p>These are "things" in Python that have <span class="dark-red">types</span>...</p>
+                    <ul>
+                        <li class="fragment"><code>12</code> <strong class="fragment dark-red">integer</strong></li>
+                        <li class="fragment"><code>100.43</code> <strong class="fragment dark-red">float</strong></li>
+                        <li class="fragment"><code>"Frank"</code> <strong class="fragment dark-red">string</strong></li>
+                        <li class="fragment"><code>True</code> <strong class="fragment dark-red">boolean</strong></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>You try!</h3>
+                    <p>What is the <span class="dark-red">type</span> of each value?</p>
+                    <ul>
+                        <li class="fragment"><code>7879879</code> <strong class="fragment dark-red">integer</strong></li>
+                        <li class="fragment"><code>0.0</code> <strong class="fragment dark-red">float</strong></li>
+                        <li class="fragment"><code>"First day!"</code> <strong class="fragment dark-red">string</strong></li>
+                        <li class="fragment"><code>"33"</code> <strong class="fragment dark-red">string</strong></li>
+                        <li class="fragment"><code>"A"</code> <strong class="fragment dark-red">string</strong></li>
+                        <li class="fragment"><code>False</code> <strong class="fragment dark-red">boolean</strong></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>Variables</h2>
+                    <p>What good are values if we can't keep track of them?</p>
+                    <p class="fragment">Variables are like labeled boxes we can put values into. They have a <span class="dark-red">name</span> and a <span class="dark-red">value</span>.</p>
+                    <pre class="fragment"><code data-trim>
+                    # Here are some variables:
+                    a = 12              # variable a is an integer with value 12
+                    b = 13.3            # variable b is a float with value 13.3
+                    c = "Hello, world!" # you get the idea!
+                    
+                    # Variable names can't have spaces, use _ instead!
+                    my_name = "Frank"
+                    i_love_python = True
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h5>A little more complicated...</h5>
+                    <pre><code data-trim data-line-numbers="1|3-4|6-7|9-11|13-16|18-22|24-28|30-39|42-47|50-54">
+                        # Welcome to Python! This line is a comment because it starts with #. Python ignores it.
+
+                        # We can print messages to the screen with `print`
+                        print("Wow what a cool course.")
+
+                        # Python is a FAST calculator
+                        print(11234.2313 * 234545 - 23.23 / 23 + 100)
+
+                        # Python has grammar just like English does:
+                        # This does NOT work
+                        # print Wow what a cool course.
+
+                        # Python runs things in ORDER
+                        print("first")
+                        print("second")
+                        print("third")
+
+                        # We can store things in variables
+                        thing = 12
+                        favorite_number = 1337
+                        my_name = "Frank"
+                        is_windy = True
+
+                        # We can use the name of the variable anytime AFTER
+                        print(thing)
+                        print(is_windy)
+                        print("My favorite number is", favorite_number)
+
+
+                        # Python doesn't care about empty lines
+                        # but spaces in a line matter!
+                        a = 12
+
+
+                        # Python ignores these empty lines!
+
+
+
+                        a = 24
+
+
+
+                        # What will this print?
+                        a = 3
+                        b = 2
+                        c = a - b
+                        print(c)
+
+
+                        # What will this print?
+                        var1 = "Hello"
+                        var2 = var1
+                        var1 = "World"
+                        print(var2)
+
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <iframe class="stretch" src="https://repl.it/@Apexal/Day-1?lite=true" scrolling="no" frameborder="no"
+                    allowtransparency="true" allowfullscreen="true"
+                    sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+            </section>
+
+            <section data-background-color="var(--question)">
+                <h3>End of Class Review</h3>
+                <p>What is Python?</p>
+                <p>What are some Python data types?</p>
+                <p>What is a variable?</p>
+                <p><strong>BONUS</strong> What is Python named after?</p>
+                <p><strong>BONUS</strong> What's the latest version of Python?</p>
             </section>
         </div>
     </div>
 
     <script src="../dist/reveal.js"></script>
     <script src="../plugins/notes/notes.js"></script>
+    <script src="../plugins/highlight/highlight.js"></script>
     <script>
-    // More info about initialization & config:
-    // - https://revealjs.com/initialization/
-    // - https://revealjs.com/config/
-    Reveal.initialize({
-        hash: true,
-        plugins: [ RevealNotes ]
-    });
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealNotes, RevealHighlight]
+        });
     </script>
 </body>
 
