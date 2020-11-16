@@ -10,17 +10,7 @@
     <link rel="stylesheet" href="../dist/reveal.css">
     <link rel="stylesheet" href="../dist/theme/blood.css" id="theme">
     <link rel="stylesheet" href="../plugins/highlight/monokai.css">
-
-    <style>
-        :root {
-            --dark-red: #9c2231;
-
-            --question: var(--dark-red);
-        }
-        .dark-red {
-            color: var(--dark-red);
-        }
-    </style>
+    <link rel="stylesheet" href="../theme/lesson.css">
 </head>
 
 <body>
@@ -133,16 +123,18 @@
                 </ul>
                 <p></p>
                 <small>Raise your hand to answer or just type in the chat!</small>
-                
+
                 <aside class="notes">Wait for a few people to answer before moving on. Give time to type.</aside>
             </section>
 
             <section>
-                <section data-background-color="#496F5D">
+                <section data-background-color="var(--information)">
                     <h3>Course Guidelines</h3>
                     <p class="fragment">There are too many students to keep everyone unmuted the whole time!</p>
-                    <p class="fragment">If you have a question during class, click "Raise Hand" on Zoom and I will unmute you at a good point.</p>
-                    <p class="fragment">When I ask a question, click "Raise Hand" and I'll unmute a few people to answer.</p>
+                    <p class="fragment">If you have a question during class, click "Raise Hand" on Zoom and I will
+                        unmute you at a good point.</p>
+                    <p class="fragment">When I ask a question, click "Raise Hand" and I'll unmute a few people to
+                        answer.</p>
                     <p class="fragment">For some questions, I'll just ask you to type in the Zoom chat.</p>
                 </section>
 
@@ -169,7 +161,7 @@
                     <h2>This color means I have a question for you!</h2>
                 </section>
 
-                <section data-background-color="#496F5D">
+                <section data-background-color="var(--information)">
                     <h2>This color is for important things!</h2>
                 </section>
 
@@ -285,8 +277,10 @@
                 <section>
                     <h2>Using Python</h2>
 
-                    <p>Usually, you have to download and install Python on your own computer to use it. <em class="fragment">Your computer doesn't understand Python on its own!</em></p>
-                    <p class="fragment">If you don't want to/can't install Python, you can do everything inside a website called <a href="https://repl.it">repl.it</a>!</p>
+                    <p>Usually, you have to download and install Python on your own computer to use it. <em
+                            class="fragment">Your computer doesn't understand Python on its own!</em></p>
+                    <p class="fragment">If you don't want to/can't install Python, you can do everything inside a
+                        website called <a href="https://repl.it">repl.it</a>!</p>
                 </section>
 
                 <section>
@@ -331,32 +325,34 @@
 
                 <section>
                     <h3>Values</h3>
-                    <p>These are "things" in Python that have <span class="dark-red">types</span>...</p>
+                    <p>These are "things" in Python that have <span class="keyword">types</span>...</p>
                     <ul>
-                        <li class="fragment"><code>12</code> <strong class="fragment dark-red">integer</strong></li>
-                        <li class="fragment"><code>100.43</code> <strong class="fragment dark-red">float</strong></li>
-                        <li class="fragment"><code>"Frank"</code> <strong class="fragment dark-red">string</strong></li>
-                        <li class="fragment"><code>True</code> <strong class="fragment dark-red">boolean</strong></li>
+                        <li class="fragment"><code>12</code> <strong class="fragment keyword">integer</strong></li>
+                        <li class="fragment"><code>100.43</code> <strong class="fragment keyword">float</strong></li>
+                        <li class="fragment"><code>"Frank"</code> <strong class="fragment keyword">string</strong></li>
+                        <li class="fragment"><code>True</code> <strong class="fragment keyword">boolean</strong></li>
                     </ul>
                 </section>
 
                 <section>
                     <h3>You try!</h3>
-                    <p>What is the <span class="dark-red">type</span> of each value?</p>
+                    <p>What is the <span class="keyword">type</span> of each value?</p>
                     <ul>
-                        <li class="fragment"><code>7879879</code> <strong class="fragment dark-red">integer</strong></li>
-                        <li class="fragment"><code>0.0</code> <strong class="fragment dark-red">float</strong></li>
-                        <li class="fragment"><code>"First day!"</code> <strong class="fragment dark-red">string</strong></li>
-                        <li class="fragment"><code>"33"</code> <strong class="fragment dark-red">string</strong></li>
-                        <li class="fragment"><code>"A"</code> <strong class="fragment dark-red">string</strong></li>
-                        <li class="fragment"><code>False</code> <strong class="fragment dark-red">boolean</strong></li>
+                        <li class="fragment"><code>7879879</code> <strong class="fragment keyword">integer</strong></li>
+                        <li class="fragment"><code>0.0</code> <strong class="fragment keyword">float</strong></li>
+                        <li class="fragment"><code>"First day!"</code> <strong class="fragment keyword">string</strong>
+                        </li>
+                        <li class="fragment"><code>"33"</code> <strong class="fragment keyword">string</strong></li>
+                        <li class="fragment"><code>"A"</code> <strong class="fragment keyword">string</strong></li>
+                        <li class="fragment"><code>False</code> <strong class="fragment keyword">boolean</strong></li>
                     </ul>
                 </section>
 
                 <section>
                     <h2>Variables</h2>
                     <p>What good are values if we can't keep track of them?</p>
-                    <p class="fragment">Variables are like labeled boxes we can put values into. They have a <span class="dark-red">name</span> and a <span class="dark-red">value</span>.</p>
+                    <p class="fragment">Variables are like labeled boxes we can put values into. They have a <span
+                            class="dark-red">name</span> and a <span class="dark-red">value</span>.</p>
                     <pre class="fragment"><code data-trim>
                     # Here are some variables:
                     a = 12              # variable a is an integer with value 12

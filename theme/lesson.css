@@ -1,0 +1,20 @@
+:root {
+    --dark-red: #9c2231;
+    --light-green: #496F5D;
+
+    --question: var(--dark-red);
+    --information: var(--light-green);
+}
+
+.dark-red {
+    color: var(--dark-red);
+}
+
+.light-green {
+    color: var(--light-green);
+}
+
+.keyword {
+    color: var(--dark-red);
+    font-family: monospace;
+}
