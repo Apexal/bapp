@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Day 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/blood.css" id="theme">
+    <link rel="stylesheet" href="../plugins/highlight/monokai.css">
+
+    <style>
+        :root {
+            --dark-red: #9c2231;
+
+            --question: var(--dark-red);
+        }
+
+        .dark-red {
+            color: var(--dark-red);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background-color="#1E2EDE">
+                <h2 style="color: #fff; text-shadow: 2px 2px 2px rgb(31, 30, 30)">Waiting for learners to arrive</h2>
+                <img class="stretch"
+                    src="https://media0.giphy.com/media/l4FGIO2vCfJkakBtC/giphy.gif?cid=ecf05e47p56tfex9tmbocfgy5b86uncmch6pg2sv2hti800z&rid=giphy.gif"
+                    alt="">
+                <p>Answer this in the chat in the meantime: "Would you rather live in a busy city or far away in
+                    nature?"</p>
+            </section>
+
+            <section data-background-color="#ff914c" data-background-image="../assets/img/python-logo.png"
+                data-background-size="40%">
+                <h2>Become a Python Programmer</h2>
+                <h3>Day 2</h3>
+            </section>
+
+            <!-- Review of last week -->
+            <section>
+                <section>
+                    <h2>Quick Review</h2>
+                    <h4>Course Guidelines and Python Basics</h4>
+                </section>
+                <section data-background-color="#496F5D">
+                    <h3>Course Guidelines</h3>
+                    <p class="fragment">If you have a question during class, drop it in the chat or click "Raise Hand".
+                    </p>
+                    <p class="fragment">When I ask a question, click "Raise Hand" and I'll unmute a few people to
+                        answer.</p>
+                    <p class="fragment"><strong>Try to participate!</strong> It's boring if class is just me talking.
+                    </p>
+                </section>
+                <section>
+                    <h3>Python Basics Review</h3>
+                    <p class="fragment">Computers cannot understand natural languages.</p>
+                    <p class="fragment">Programming languages let us command the computer in a language it can
+                        understand.</p>
+                    <p class="fragment">Python is a general programming language that looks a lot like English.</p>
+                    <p class="fragment">Punctuation and indentation and important in Python's grammar (syntax)!</p>
+                </section>
+
+                <!-- Review questions about data types and variables -->
+                <section data-background-color="var(--question)">
+                    <h3>Review Question</h3>
+                    <h2>What are the basic <code class="dark-red">data types</code> of values Python?</h2>
+
+                    <aside class="notes"><code>strings, booleans, ints, floats</code></aside>
+                </section>
+                <section data-background-color="var(--question)">
+                    <h3>Review Question</h3>
+                    <h2>What are <code>a</code>, <code>b</code>, and <code>c</code>?</h2>
+                    <pre><code data-trim>
+                        a = 130
+                        b = "Frank"
+                        c = True
+                    </code></pre>
+                    <aside class="notes">They are <strong>variables</strong>!</aside>
+                </section>
+                <section data-background-color="var(--question)">
+                    <h3>Review Question</h3>
+                    <h2>What does this program do?</h2>
+                    <pre><code data-trim>
+                        name = "Earl E. Bird"
+                        age = 99
+
+                        print(name, age)
+                    </code></pre>
+                    <aside class="notes">This program prints <code>Earl E. Bird 99</code></aside>
+                </section>
+            </section>
+
+            <section>
+                <img src="../assets/img/completely_different.webp" alt="And now for something completely different!"
+                    class="stretch">
+            </section>
+
+            <!-- Deep dive into variables, math operations, and user input -->
+            <section>
+                <section>
+                    <h2>Variables</h2>
+                    <p>Remember, variables are names for values.</p>
+                    <pre><code data-trim>
+                        var1 = 130 # int variable
+                        var2 = 1.1 # float variable
+                        var3 = 231 + 13 * 10 # int variable
+                    </code></pre>
+                    <p>You use their name in place of a value.</p>
+                    <pre><code data-trim>
+                        print("I.M. Boring")
+                        # The above is the same as the below!
+                        name = "I.M. Boring"
+                        print(name)
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>What can you name a variable?</h3>
+                    <ul>
+                        <li class="fragment">Can't start with a number</li>
+                        <li class="fragment">Can't have spaces</li>
+                        <li class="fragment">Can't have punctuation besides <code>_</code></li>
+                        <li class="fragment">Capitalization matters!</li>
+                    </ul>
+
+                    <pre class="fragment"><code data-trim>
+                        # Allowed variable names!
+                        my_cool_var = "woo hoo"
+                        MY_cool_var = "this is a different variable"
+                        person13 = "Robyn Banks"
+                        WOW_WOW_WOW = 1 # a bad name though...
+
+                        # NOT ALLOWED variables names
+                        1movie = "Star Wars"
+                        eggs and ham = True
+                    </code></pre>
+
+                    <small class="fragment">Keep variable names <strong>lowercase</strong> and separate
+                        words with <strong>_</strong></small>
+
+                    <aside class="notes">The naming rules cannot be broken. Python will not run! The suggestion at the
+                        bottom is called a "best practice". Python doesn't care if you follow it, but programmers
+                        generally follow that rule so you should too in order to stary consistent!</aside>
+                </section>
+
+                <!-- Duck typing -->
+                <section>
+                    <h3>Variables can change value and type</h3>
+                    <small>Not all languages allow changing the type!</small>
+
+                    <pre><code data-trim>
+                        name = "Shirley U. Care" # a string right now
+                        name = 20 # now a int!
+                        name = "Max E.Mumm" # back to strng, we can change it whenever we want!
+
+                        print(name) # What does this print?
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h4>Let's do stuff!</h4>
+                    <p>Math is really easy to do:</p>
+                    <pre data-trim>
+                        + Addition
+                        - Subtraction
+                        * Multiplication
+                        / Division
+                    </pre>
+                    <pre><code data-trim>
+                        num1 = 123
+                        num2 = 145
+                        
+                        num1 = num1 + 1
+                        num1 += 1 # this is a shortcut for the above!
+
+                        my_sum = num1 + num2 # Addition
+
+                        negative = 10000 - my_sum # Subtraction
+                        negative -= 10 # This is a shortcut for subtracting 10!
+
+                        multipy = num1 * num2 # Multiplication
+
+                        what_even_is_this = num1 * 100 / (num2 + 10) - 32 # Everything!
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Let's write a program!</h2>
+                </section>
+
+                <section>
+                    <h3>First... User input</h3>
+                    <p>We can get the user to type in a value so that we can use it:</p>
+                    <pre><code data-trim>
+                        print("Welcome to my program!")
+                        name = input("Enter your name: ")
+
+                        print("Hello", name)
+                    </code></pre>
+
+                    <p><code>input()</code> waits for the user to type and hit <code>ENTER</code> and then stores
+                        whatever they entered as a <code class="dark-red">string</code>!</p>
+                </section>
+
+                <section>
+                    <h3>Number Inputs</h3>
+                    <p>What if we ask the user to enter a number?</p>
+                    <pre class="fragment"><code data-trim>
+                        age = input("What is your age? ")
+                        print(type(age)) # its a STRING???
+
+                        one_year_older = age + 1 # Can't add string to a int! 
+                    </code></pre>
+                    <p class="fragment">If we type in <code>12</code> it takes it in as <code>"12"</code>!</p>
+                    <p class="fragment">We must turn it into a int with <code>int()</code>:</p>
+                    <pre class="fragment"><code data-trim>
+                        # int("12") gives us 12
+                        # int("abc") makes Python angry and crashes!
+                        age = int(input("What is your age? "))
+                        
+                        one_year_older = age + 1 # this works now!
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Finished</h3>
+                    <pre><code data-trim>
+                        print("Welcome to my program!")
+                        name = input("Enter your name: ")
+
+                        age = int(input("Enter your age: "))
+
+                        current_year = 2020
+                        probably_born = current_year - age
+
+                        print("You were probably born in", probably_born)
+                    </code></pre>
+
+                    <p><strong>Question</strong> Will this program always guess your birth year right?</p>
+                </section>
+                <section>
+                    <iframe class="stretch" width="100%" src="https://repl.it/@Apexal/Variables-and-Input?lite=true"
+                        scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true"
+                        sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+                </section>
+            </section>
+
+            <!-- Control Flow: Loops and IF statements -->
+            <section>
+                <section>
+                    <h2>Controlling the Flow of your Code</h2>
+                    <img src="https://media1.giphy.com/media/h8y265b9iKtzKT0pDj/giphy.gif?cid=ecf05e47lvwampb725f0n1pfmxdrwmsfimndkviv2ggjocth&rid=giphy.gif"
+                        alt="Spongebob meme" class="stretch">
+                </section>
+
+                <section>
+                    <h3>Doing the same thing over and over again</h3>
+                    <img src="https://media1.giphy.com/media/dzvcOaG7QsRd6/giphy.gif?cid=ecf05e47qwh6r9u3mdydp9ci1fgcshvzittnkgcg4xfovw3j&rid=giphy.gif"
+                        alt="A dog on repeat" class="stretch">
+                </section>
+
+                <section>
+                    <h3>Loops</h3>
+                    <p class="fragment">It's common to have to do something many times in a row.</p>
+                    <p class="fragment">You <em>could</em> copy-paste... <span class="fragment">why not?</span></p>
+                    <p class="fragment">Sometimes we know how many times we want to repeat...</p>
+                    <p class="fragment">Sometimes we DON'T!</p>
+                </section>
+
+                <section>
+                    <h3>For Loops</h3>
+                    <p>When you want to repeat sometime <strong>for</strong> a certain number of times:</p>
+                    <pre><code data-trim class="python">
+
+                        # 1) What will this do?
+                        for i in range(100):
+                            print("Woo hoo!")
+                        
+                        # 2) What will this do?
+                        for pepsi_bottle in range(15): # I was thirsty when I typed this!
+                            print("Loop number ", pepsi_bottle) 
+
+                        # 3) Or this?
+                        for num in range(10, 21):
+                            print("I like the number ", num)
+                    </code></pre>
+
+                    <p class="fragment"><code>i</code> (or whatever you call it) will hold the number you are up to each
+                        time you loop!
+                    </p>
+                </section>
+
+                <section>
+                    <h3>While Loops</h3>
+                    <p>When want to keep looping <strong>while</strong> something is true:</p>
+                    <pre><code data-trim class="python">
+                        # 1) What will this do?
+                        number = 1
+                        while number < 10:
+                            print("We're up to", number)
+                            number += 1
+
+                        # 2) Or this?
+                        while True:
+                            print("Uh oh...")
+                        
+                        # 3) Or this?
+                        while False:
+                            destroy_the_world()
+                            blow_up_moon()
+                            print("The End")
+                    </code></pre>
+
+                    <p class="fragment">Be careful not to cause an infinite loop!
+                    </p>
+                </section>
+
+                <section>
+                    <h3>We must go deeper</h3>
+                </section>
+
+                <section>
+                    <h3>Loops inside loops inside loops...</h3>
+
+                    <pre><code data-trim class="python">
+                        # Outer loop!
+                        while True:
+                            year = int(input("Enter a year: "))
+
+                            # Inner loop!
+                            for i in range(10):
+                                print(i, " year(s) before that it was", year - i)
+                    </code></pre>
+
+                    <pre class="fragment"><code data-trim class="python">
+                        # Multiplication table!
+                        for num1 in range(1, 13):
+                            for num2 in range(1, 13):
+                                print(num1, "times", num2, "equals", num1 * num2)
+                    </code></pre>
+
+                    <p class="fragment">These are called <strong>nested loops</strong>.</p>
+                </section>
+            </section>
+
+            <section data-background-color="var(--question)">
+                <h3>End of Class Review</h3>
+                <p>Can variables change what they hold?</p>
+                <p>Can variables change their type?</p>
+                <p>How can we get the user to type something in?</p>
+                <p>How can we turn a string into a number?</p>
+                <p>What two things can we use to repeat code?</p>
+            </section>
+
+            <!-- Farewll slide -->
+            <section>
+                <img src="https://media0.giphy.com/media/l1J3CbFgn5o7DGRuE/giphy.gif?cid=ecf05e47csv8449vxt8ls26567h3ts2npb3xll2ojdsmjhr7&rid=giphy.gif"
+                    alt="" class="stretch">
+                <p>Leave any comments or questions on the Outschool page!</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugins/notes/notes.js"></script>
+    <script src="../plugins/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealNotes, RevealHighlight]
+        });
+    </script>
+</body>
+
+</html>
