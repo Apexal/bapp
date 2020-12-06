@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Day 3</title>
+    <meta name="author" content="Frank Matranga">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/blood.css" id="theme">
+    <link rel="stylesheet" href="../plugins/highlight/monokai.css">
+    <link rel="stylesheet" href="../theme/lesson.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background-color="#1E2EDE">
+                <h2 style="color: #fff; text-shadow: 2px 2px 2px rgb(31, 30, 30)">Waiting for learners to arrive</h2>
+                <img class="stretch"
+                    src="https://media0.giphy.com/media/l4FGIO2vCfJkakBtC/giphy.gif?cid=ecf05e47p56tfex9tmbocfgy5b86uncmch6pg2sv2hti800z&rid=giphy.gif"
+                    alt="">
+                <p>Answer this in the chat in the meantime: [QUESTION]</p>
+            </section>
+
+            <section data-background-color="#ff914c" data-background-image="../assets/img/python-logo.png"
+                data-background-size="40%">
+                <h2>Become a Python Programmer</h2>
+                <h3>Day 3</h3>
+
+                <aside class="notes">
+                    Today we're going to be talking about if statements, loops, and user input to make real programs.
+                </aside>
+            </section>
+
+            <!-- Review -->
+            <section>
+                <section data-background-color="var(--information)">
+                    <h3>Quick Recap</h3>
+                    <h5>Last class was a while ago!</h5>
+
+                    <aside class="notes">Wait for a few people to answer before moving on. Give time to type.</aside>
+                </section>
+
+                <section data-background-color="var(--question)">
+                    <h5>Questions</h5>
+                    <p class="fragment">Why learn Python?</p>
+                    <p class="fragment">What is coding?</p>
+                    <p class="fragment">What is coding?</p>
+                    <p class="fragment">What are variables?</p>
+                    <p class="fragment">What are loops?</p>
+                </section>
+            </section>
+
+            <section>
+                <img src="../assets/img/completely_different.webp" alt="" class="stretch">
+            </section>
+
+            <section>
+                <section>
+                    <h2>If Statements</h2>
+                    <h6>Also known as "conditional statements"</h6>
+                </section>
+                <section>
+                    <p><strong>If statements</strong> let our Python program choose different paths!</p>
+                    <p>If <span class="light-green">something</span> is <code>True</code> then do <span
+                            class="light-green">stuff</span>.</p>
+                </section>
+                <section>
+                    <h5>Simple If Statements</h5>
+                    <p class="fragment">If I am hungry... <span class="fragment">I will eat!</span></p>
+                    <p class="fragment">If it is Saturday morning... <span class="fragment">I will sleep!</span></p>
+                    <p class="dark-red">What examples can you come up with?</p>
+                </section>
+                <section>
+                    <h5>Coding Simple If Statements</h5>
+                    <p>When coding if statements, we give Python a <strong>condition</strong> that will either be <span
+                            class="keyword">True</span> or <span class="keyword">False</span></p>
+                    <ul>
+                        <li class="fragment"><code>5 == 5</code> <span class="keyword">True</span></li>
+                        <li class="fragment"><code>5 == 1 + 1</code> <span class="keyword">False</span></li>
+                        <li class="fragment"><code>"apples" == "oranges"</code> <span class="keyword">False</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h5>Comparing Things</h5>
+                    <table>
+                        <tr>
+                            <td><code>a == b</code></td>
+                            <td>Is a equal to b?</td>
+                        </tr>
+                        <tr>
+                            <td><code>a > b</code></td>
+                            <td>Is a greater than b?</td>
+                        </tr>
+                        <tr>
+                            <td><code>a < b</code></td>
+                            <td>Is a less than b?</td>
+                        </tr>
+                        <tr>
+                            <td><code>not a</code></td>
+                            <td>If a is True/False then the opposite!</td>
+                        </tr>
+                    </table>
+                    <p>And more!</p>
+
+                    <aside class="notes">Switch to repl.it and show simple if statements here.</aside>
+                </section>
+                <section>
+                    <h4>What does the user think?</h4>
+                    <p>Remember that we can get the user to type something in?</p>
+                    <pre><code data-trim>
+                        name = input("What is your name? ")
+                    </code></pre>
+                    <p class="fragment">Let's use this...</p>
+                    <pre class="fragment"><code data-trim>
+                        name = input("Enter name: ")
+                        if name == "Frank":
+                            print("You are the teacher!")
+                        else:
+                            print("You are a student!")
+                    </code></pre>
+                </section>
+                <section data-background-color="var(--question)">
+                    <h3>Questions so far?</h3>
+                </section>
+            </section>
+
+            <section>
+                <section data-background-color="var(--information)">
+                    <h2>Making a Game</h2>
+                    <h4>(A very very simple game)</h4>
+                </section>
+            </section>
+
+            <section data-background-color="var(--question)">
+                <h3>End of Class Review</h3>
+                <p>What is Python?</p>
+                <p>What are some Python data types?</p>
+                <p>What is a variable?</p>
+                <p><strong>BONUS</strong> What is Python named after?</p>
+                <p><strong>BONUS</strong> What's the latest version of Python?</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugins/notes/notes.js"></script>
+    <script src="../plugins/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealNotes, RevealHighlight]
+        });
+    </script>
+</body>
+
+</html>
