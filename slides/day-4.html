@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Day 4</title>
+    <meta name="author" content="Frank Matranga">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/blood.css" id="theme">
+    <link rel="stylesheet" href="../plugins/highlight/monokai.css">
+    <link rel="stylesheet" href="../theme/lesson.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background-color="#1E2EDE">
+                <h2 style="color: #fff; text-shadow: 2px 2px 2px rgb(31, 30, 30)">Waiting for learners to arrive</h2>
+                <img class="stretch"
+                    src="https://media0.giphy.com/media/l4FGIO2vCfJkakBtC/giphy.gif?cid=ecf05e47p56tfex9tmbocfgy5b86uncmch6pg2sv2hti800z&rid=giphy.gif"
+                    alt="">
+                <p>Answer this in the chat in the meantime: What would you do with $100?</p>
+            </section>
+
+            <section>
+                <section>
+                    <h2>If Statements Review</h2>
+                    <p>Recall that our program can take different paths based on whether something is <span class="keyword">True</span> or <span class="keyword">
+                        False
+                    </span>.</p>
+                </section>
+
+                <section>
+                    <h4>Examples</h4>
+                    <pre class="fragment"><code data-trim class="python">
+                        age = int(input("How old are you? "))
+
+                        if age >= 18:
+                            print("You are an adult.")
+                        elif age >= 13:
+                            print("You are a teenager.")
+                        else:
+                            print("You aren't a teenager yet!")
+                    </code></pre>
+                    <pre class="fragment"><code data-trim class="python">
+                        import random
+
+                        number = random.randint(1, 100)
+                        guess = int(input("Guess a number between 1 and 100: "))
+
+                        if number == guess:
+                            print("Correct!")
+                        else:
+                            print("Wrong...")
+                    </code></pre>
+                </section>
+
+                <section>
+                    <img src="../assets/img/completely_different.webp" alt="Transition slide" class="stretch">
+                </section>
+            </section>
+
+            <section>
+                <section data-background-color="var(--information)">
+                    <h2>Lists</h2>
+                    <p class="fragment">Keeping track of many things in order.</p>
+                    <img src="https://media0.giphy.com/media/B7o99rIuystY4/giphy.gif?cid=ecf05e470lf00t1x8logab1qmbiv6o882qsygqi1urz32pka&rid=giphy.gif" alt="Spongebob list meme">
+                </section>
+
+                <section>
+                    <h3>What is a List?</h3>
+                    <p>A list is a collection of things in a particular order.</p>
+                    <ul>
+                        <li class="fragment">Shopping list</li>
+                        <li class="fragment">Directions</li>
+                        <li class="fragment">Line of people at a store</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Python Lists</h3>
+                    <p>Python lets us use <strong>lists</strong> to hold more than one thing.</p>
+                    <pre><code data-trim data-line-numbers="1|3-8|4|5|6|7|8" class="python">
+                        number = 13 # integer variable
+                        
+                        # Lists!
+                        names = ["Alice", "Bob", "Tony", "Susan"] # list of strings
+                        my_favorite_numbers = [13, 7, 999] # list of numbers
+                        empty = [] # nothing in this list!
+                        not_much = [True] # just one boolean here
+                        mixing = ["Frank", 20, "NYC"] # different TYPES
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Create a List</h2>
+                    <p>A list in Python is surround by <span class="keyword">[</span> and <span class="keyword">]</span></p> and each item is separated with a <span class="keyword">,</span>
+                    <p class="fragment">You can put anything in a list!</p>
+                    <pre class="fragment"><code data-trim class="python">
+                        ["Frank", "Nicholas", "Analisa", "Gianna"] # my siblings
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>List Items</h3>
+                    <p>Every item has a position <strong>starting at 0</strong>.</p>
+                    <pre class="fragment"><code data-trim class="python">
+                        family = ["Frank", "Nicholas", "Analisa", "Gianna"]
+                        #            0         1           2          3 
+
+                        # family[0] = "Frank"
+                        # family[1] = "Nicholas"
+                        # family[2] = "Analisa"
+                        # family[3] = "Gianna"
+                    </code></pre>
+                    <p class="fragment">We can get a specific item if we ask for the position!</p>
+                    <pre class="fragment"><code data-trim class="python">
+                        first_child = family[0]
+                        second_child = family[1]
+
+                        print(first_child, second_child)
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>List Length</h3>
+                    <p>And the length of the list with <span class="keyword">len()</span>!</p>
+                    <pre><code data-trim class="python">
+                        num_of_people = len(family)
+
+                        print("There are", num_of_people, "in the family")
+                    </code></pre>
+                </section>
+                <section data-background-color="var(--question)">
+                    <h3>Quiz</h3>
+                    <p>What will these print?</p>
+                    <pre><code data-trim class="python" data-line-numbers="1|3|5|7|9">
+                        stuff = ["hello", "world", "I", "like", "python"]
+                        
+                        print(stuff[1])
+                        
+                        print(stuff[4])
+
+                        print(stuff[10])
+
+                        print(len(stuff))
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Adding Items</h3>
+                    <p>Lists would be boring if we couldn't change them!</p>
+                    <p class="fragment">We can <strong>add</strong> items easily.</p>
+                    <pre class="fragment"><code data-trim class="python">
+                        names = ["Frank"]
+
+                        # Add items to the END with append
+                        names.append("Nicholas")
+                        names.append("Analisa")
+                        names.append("Gianna")
+
+                        print(names)
+                    </code></pre>
+                    <em class="fragment">Remember that app<strong>end</strong> adds items to the <strong>end</strong>!</em>
+                </section>
+                <section>
+                    <h3>Removing Items</h3>
+                    <p class="fragment">We can <strong>remove</strong> items easily.</p>
+                    <pre class="fragment"><code data-trim data-line-numbers="1|3-6|7-12" class="python">
+                        names = ["Frank", "Nicholas", "Analisa", "Gianna"]
+                        
+                        names.remove("Frank")
+                        names.remove("Gianna")
+                        
+                        print(names)
+
+                        # OR if you know where the thing to remove is
+
+                        del names[0] # remove the first item
+
+                        print(names)
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Going Through a List</h2>
+                    <p>How do we see everything in a list?</p>
+                </section>
+                <section>
+                    <h4>Looping through a List</h4>
+                    <p>There are <strong>two</strong> easy ways to go through every item in a list...</p>
+                    <pre><code data-trim class="python">
+                        family = ["Frank", "Nicholas", "Analisa", "Gianna"]
+
+                        # FOR IN LOOP
+                        for name in family:
+                            print(name)
+                        
+                        # OR
+                        for i in range(len(family)):
+                            print(family[i])
+                    </code></pre>
+                </section>
+                <section>
+                    <h3>Is something in List?</h3>
+                    <pre><code data-trim data-line-numbers="1|3-4|6-7|9" class="python">
+                        family = ["Frank", "Nicholas", "Analisa", "Gianna"]
+
+                        if "Frank" in family:
+                            print("Frank is part of the family")
+                        
+                        if "Rand al'Thor" in family:
+                            print("Rand is in the family!")
+                        
+                        nick = "Nick" in family # This will be either True or False
+                    </code></pre>
+                </section>
+            </section>
+
+            <section data-background-image="https://media1.giphy.com/media/AOSwwqVjNZlDO/giphy.gif?cid=ecf05e47rly9qz4hy9uznty9e2grv41ki4hfgqbywul06qxg&rid=giphy.gif">
+                <h3>Project</h3>
+                <h1>TODO LIST</h1>
+            </section>
+
+            <section data-background-color="var(--question)">
+                <h3>End of Class Review</h3>
+                <p>What is a list in Python?</p>
+                <p>What can we put in a list?</p>
+                <p>How do we get the length of a list?</p>
+            </section>
+        </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugins/notes/notes.js"></script>
+    <script src="../plugins/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealNotes, RevealHighlight]
+        });
+    </script>
+</body>
+
+</html>
