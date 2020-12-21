@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Day 5</title>
+    <meta name="author" content="Frank Matranga">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/blood.css" id="theme">
+    <link rel="stylesheet" href="../plugins/highlight/monokai.css">
+    <link rel="stylesheet" href="../theme/lesson.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background-color="#1E2EDE">
+                <h2 style="color: #fff; text-shadow: 2px 2px 2px rgb(31, 30, 30)">Waiting for learners to arrive</h2>
+                <img class="stretch"
+                    src="https://media0.giphy.com/media/l4FGIO2vCfJkakBtC/giphy.gif?cid=ecf05e47p56tfex9tmbocfgy5b86uncmch6pg2sv2hti800z&rid=giphy.gif"
+                    alt="">
+                <p>Answer this in the chat in the meantime: Any plans for winter break?</p>
+            </section>
+
+            <section data-background-color="#ff914c" data-background-image="../assets/img/python-logo.png"
+                data-background-size="40%">
+                <h2>Become a Python Programmer</h2>
+                <h3>Day 5</h3>
+
+                <aside class="notes">
+                    Today we're going to be talking about if statements, loops, and user input to make real programs.
+                </aside>
+            </section>
+
+            <section>
+                <h2>Review</h2>
+                <p>So far we've learned about</p>
+                <ul>
+                    <li class="fragment">values</li>
+                    <li class="fragment">variables</li>
+                    <li class="fragment">if statements</li>
+                    <li class="fragment">loops</li>
+                    <li class="fragment">lists</li>
+                </ul>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Going Beyond Lists</h3>
+                    <p>Imagine that my program needs to keep track of people and their favorite foods. For example, my favorite food is ravioli.</p>
+                    <p class="fragment">How would I keep track of this in Python? Here's one way...</p>
+                    <pre class="fragment"><code data-trim>
+                        # What isn't the best about this?
+                        name1 = "Frank"
+                        food1 = "ravioli"
+
+                        name2 = "Nicholas"
+                        food2 = "everything"
+
+                        # ...
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Dictionaries</h3>
+                    <p>Dictionaries match a key to a value, like a real dictionary!</p>
+                    <pre><code data-trim>
+                        favorite_foods = {
+                            # key: value
+                            "Frank": "ravioli",
+                            "Nicholas": "everything"
+                        }
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Dictionaries</h3>
+                    <pre><code data-trim>
+                        favorite_foods = {
+                            # key: value
+                            "Frank": "ravioli",
+                            "Nicholas": "everything"
+                        }
+
+                        # Add or change things!
+                        favorite_foods["Sarah"] = "sushi"
+                        favorite_foods["Dave"] = "dumplings"
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Dictionaries</h3>
+                    <p>You can have any types of values!</p>
+                    <pre><code data-trim>
+                        person = {
+                            "name": "Frank",
+                            "age": 20,
+                            "languages": ["python", "javascript", "java", "c", "c++", "html", "css"]
+                        }
+                    </code></pre>
+                </section>
+            </section>
+
+            <section
+                data-background-image="https://media1.giphy.com/media/AOSwwqVjNZlDO/giphy.gif?cid=ecf05e47rly9qz4hy9uznty9e2grv41ki4hfgqbywul06qxg&rid=giphy.gif">
+                <h3>Project</h3>
+                <h1>Bank Account</h1>
+            </section>
+        </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugins/notes/notes.js"></script>
+    <script src="../plugins/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealNotes, RevealHighlight]
+        });
+    </script>
+</body>
+
+</html>
