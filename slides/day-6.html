@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Day 5</title>
+    <meta name="author" content="Frank Matranga">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/blood.css" id="theme">
+    <link rel="stylesheet" href="../plugins/highlight/monokai.css">
+    <link rel="stylesheet" href="../theme/lesson.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background-color="#1E2EDE">
+                <h2 style="color: #fff; text-shadow: 2px 2px 2px rgb(31, 30, 30)">Waiting for learners to arrive</h2>
+                <img class="stretch"
+                    src="https://media0.giphy.com/media/l4FGIO2vCfJkakBtC/giphy.gif?cid=ecf05e47p56tfex9tmbocfgy5b86uncmch6pg2sv2hti800z&rid=giphy.gif"
+                    alt="">
+                <p>Answer this in the chat in the meantime: If you could be a sound, what would it be?</p>
+            </section>
+
+            <section data-background-color="#ff914c" data-background-image="../assets/img/python-logo.png"
+                data-background-size="40%">
+                <h2>Become a Python Programmer</h2>
+                <h3>Day 6</h3>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Review</h2>
+                    <p>So far we've learned about</p>
+                    <ul>
+                        <li class="">values</li>
+                        <li class="">variables</li>
+                        <li class="">if statements</li>
+                        <li class="">loops</li>
+                        <li class="">lists</li>
+                        <li class="fragment">dictionaries</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Dictionaries Review</h3>
+                    <pre><code data-trim class="python">
+                        grades = {
+                            "Frank": 93.2,
+                            "Nicholas": 99.0,
+                            "Analisa": 94.3,
+                            "Gianna": 94.3
+                        }
+
+                        for person, grade in grades.items():
+                            print(person, "scored a", grade)
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Dictionaries Review (cont.)</h3>
+                    <pre><code class="python" data-trim>
+                        # Dictionaries inside dictionaries!
+                        users = {
+                            "apexal": {
+                                "name": "Frank",
+                                "age": 20
+                            },
+                            "nickm": {
+                                "name": "Nicholas",
+                                "age": 19
+                            }
+                        }
+
+                        print(users["apexal"]["name"])
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <img src="../assets/img/completely_different.webp" alt="Transition slide" class="stretch">
+            </section>
+
+            <section>
+                <h2>Saving and Loading</h2>
+                <h4>with files</h4>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Why saving and loading?</h3>
+                    <p>Our programs can't remember anything after they run!</p>
+                    <p class="fragment">Imagine a video game where every time you go to play you have to start all over
+                        again.</p>
+                </section>
+
+                <section>
+                    <h3>Where do we save things?</h3>
+                    <p>Programs can save things in a lot of places. We are going to focus on <strong>text
+                            files</strong>.</p>
+                </section>
+
+                <section>
+                    <h3>Text Files</h3>
+                    <p>A text file is like Google Docs but ONLY text with nothing fancy at all:</p>
+
+                    <pre>stuff.txt</pre>
+                    <pre><code data-trim class="text">
+                        im a boring text file
+                        
+                        no color
+                        no different sizes
+                        no pictures :(
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h4>Reading a Text File</h4>
+
+                    <pre><code data-trim class="python">
+                        # Open up the file named stuff.txt
+                        with open("stuff.txt") as f:
+                            # Read in all of the lines into a list
+                            lines = f.readlines()
+                            # Print out the lines
+                            print(lines)
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>What is <code>\n</code>?</h3>
+                    <p class="fragment"><code>\n</code> means there is a <strong>new line</strong>!</p>
+
+                    <pre><code data-trim class="python">
+                        print("hello\nworld\n\nempty lines!")                         
+                    </code></pre>
+                    <p>Prints</p>
+                    <pre><code data-trim class="text">
+                        hello
+                        world
+                        
+                        empty lines!</code></pre>
+                </section>
+
+                <section>
+                    <h4>Getting Rid of <code>\n</code></h4>
+                    <p>We don't want <code>\n</code> at the end of every line. Use
+                        <code>strip()</code> to get rid of spaces and <code>\n</code>.
+                    </p>
+                    <pre><code data-trim class="python">
+                        with open("stuff.txt") as f:
+                            for line in f.readlines():
+                                print(line.strip())
+                    </code></pre>
+
+                </section>
+
+                <section>
+                    <h4>Reading Todos</h4>
+                    <p class="fragment">What if we added this to the top of our TODO program?</p>
+                    <pre class="fragment"><code data-trim class="python">
+                        with open("todos.txt") as f:
+                            for line in f.readlines():
+                                todos.append(line.strip())
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h4>Writing a Text File</h4>
+                    <p>Just add
+                        <code>"w"</code> to write to the file!
+                    </p>
+                    <pre class="fragment"><code data-trim class="python">
+                        with open("stuff.txt", "w") as f:
+                            f.write("Hello world!")
+                    </code></pre>
+                    <strong class="fragment">NOTE: This will get rid of what was in the file!</strong>
+                </section>
+
+                <section>
+                    <h4>Saving Todos</h4>
+                    <p class="fragment">Let's add a save command to our TODO program.</p>
+                    <pre class="fragment"><code data-trim class="python">
+                        with open("todos.txt", "w") as f:
+                            for todo in todos:
+                                f.write(todo + "\n")
+                    </code></pre>
+                </section>
+            </section>
+
+
+            <section
+                data-background-image="https://media1.giphy.com/media/AOSwwqVjNZlDO/giphy.gif?cid=ecf05e47rly9qz4hy9uznty9e2grv41ki4hfgqbywul06qxg&rid=giphy.gif">
+                <h3>Project</h3>
+                <h1>TODO List 2.0</h1>
+            </section>
+        </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugins/notes/notes.js"></script>
+    <script src="../plugins/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealNotes, RevealHighlight]
+        });
+    </script>
+</body>
+
+</html>
