@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Day 7</title>
+    <meta name="author" content="Frank Matranga">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/blood.css" id="theme">
+    <link rel="stylesheet" href="../plugins/highlight/monokai.css">
+    <link rel="stylesheet" href="../theme/lesson.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background-color="#1E2EDE">
+                <h2 style="color: #fff; text-shadow: 2px 2px 2px rgb(31, 30, 30)">Waiting for learners to arrive</h2>
+                <img class="stretch" src="/assets/img/dancing_robot.gif" alt="">
+                <p>Answer this in the chat in the meantime: What do you think 2021 will be like?</p>
+            </section>
+
+            <section data-background-color="#ff914c" data-background-image="../assets/img/python-logo.png"
+                data-background-size="40%">
+                <h2>Become a Python Programmer</h2>
+                <h3>Day 7</h3>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Review</h2>
+                    <p>So far we've learned about</p>
+                    <ul>
+                        <li class="">values</li>
+                        <li class="">variables</li>
+                        <li class="">if statements</li>
+                        <li class="">loops</li>
+                        <li class="">lists</li>
+                        <li class="">dictionaries</li>
+                        <li class="">file input/output</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>File I/O Review</h3>
+                    <pre><code data-trim class="python">
+                        print("Loading...")
+
+                        with open("level.txt") as f:
+                            level = int(f.read())
+
+                        print("You left off on Level " + str(level))
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>File I/O Review (cont.)</h3>
+                    <pre><code class="python" data-trim>
+                        # ...
+                        # imagine a really cool game where you keep leveling up!
+                        
+                        print("Saving...")
+                        with open("level.txt", "w") as f:
+                            f.write(str(level) + "\n")
+                        print("Saved level.")
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <img src="../assets/img/completely_different.webp" alt="Transition slide" class="stretch">
+            </section>
+
+            <section>
+                <h2>Being Lazy <span class="fragment">and Organized</span></h2>
+                <h4>with functions</h4>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Scenario</h3>
+                    <p>Imagine we are coding for a super complicated robot...</p>
+                    <img class="fragment" src="/assets/img/dancing_robot.gif" alt="Dancing robot">
+                </section>
+
+                <section>
+                    <h3>Scenario (cont.)</h3>
+                    <p>Our robot works in a store and shops for people who order from an app...</p>
+                    <p class="fragment">Somebody places an order for 5 items...</p>
+                    <p class="fragment">What actions does the robot have to do?</p>
+                </section>
+
+                <section>
+                    <h3>Scenario (cont.)</h3>
+                    <p>Imagine writing a super long program that has the robot do all of those actions in order.</p>
+                    <p class="fragment">That'd be pretty messy and hard to read!</p>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h4>Functions</h4>
+
+                    <p>Functions let us break up our program into parts that can be run as many times as we want!</p>
+                    <ul>
+                        <li>
+                            <code>read_order</code>
+                        </li>
+                        <li>
+                            <code>choose_item</code>
+                        </li>
+                        <li>
+                            <code>locate_aisle</code>
+                        </li>
+                        <li>
+                            <code>navigate_to_aisle</code>
+                        </li>
+                        <li>
+                            <code>find_item</code>
+                        </li>
+                        <li>
+                            <code>grab_item</code>
+                        </li>
+                    </ul>
+                    <p class="fragment">Each of these can be broken down into more functions too.</p>
+                </section>
+
+                <section>
+                    <h3>Functions (cont.)</h3>
+                    <p>This makes our code way more readable, and helps us repeat ourselves less.</p>
+                </section>
+
+                <section>
+                    <h3>Simple Function Example</h3>
+                    <p>First we <code class="keyword">define</code> a function. Then we can <span
+                            class="keyword">call</span> it whenever we want.</p>
+                    <pre><code data-trim class="python" data-line-numbers="1-3|5|6">
+                        def do_stuff():
+                            print("OOh I'm in a function called do_stuff")
+                            print("I can do anything here!")
+                        
+                        do_stuff() # call the function so that it actually runs!
+                        do_stuff() # do it a second time
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>More Functions</h3>
+                    <p>Functions can do more than that example. They can</p>
+                    <ul>
+                        <li class="fragment">take in values to work with</li>
+                        <li class="fragment">return something when done</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h4>Robot Functions</h4>
+                    <p>The robot function <code>navigate_to_aisle</code> has to be told what aisle we mean each time we
+                        call it.</p>
+                    <pre><code data-trim class="python" data-line-numbers="1-3|5-10">
+                        def navigate_to_aisle(aisle_num):
+                            print("I am going to asile #" + str(aisle_num))
+                            # robot code here...
+                        
+                        # Later on in the program we can call it with any number for the aisle!
+                        navigate_to_aisle(3)
+                        navigate_to_aisle(1)
+                        navigate_to_aisle(100)
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Arguments/Parameters</h3>
+                    <p>Functions can receive <span class="keyword">arguments</span> (also known as parameters) that can
+                        be used inside the function.</p>
+                    <p class="fragment">The function doesn't know what they will hold until they are called with values!
+                    </p>
+                    <pre class="fragment"><code data-trim class="python">
+                        # num1 and num2 are ARGUMENTS
+                        def add_together(num1, num2):
+                            # Inside here we use them like variables!
+                            print(num1 + num2)
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h3>Return Values</h3>
+                    <p>Functions can <span class="keyword">return</span> a value to be used after it is called.</p>
+                    <pre class="fragment"><code data-trim class="python">
+                        def add_20(num):
+                            answer = num + 20
+                            return answer
+                        
+                        print(add_20(1))
+                        print(add_20(100))
+                        print(add_20("potato")) # what happens here??
+                    </code></pre>
+                </section>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugins/notes/notes.js"></script>
+    <script src="../plugins/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealNotes, RevealHighlight]
+        });
+    </script>
+</body>
+
+</html>
