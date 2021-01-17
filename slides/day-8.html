@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Day 8</title>
+    <meta name="author" content="Frank Matranga">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/reset.css">
+    <link rel="stylesheet" href="../dist/reveal.css">
+    <link rel="stylesheet" href="../dist/theme/blood.css" id="theme">
+    <link rel="stylesheet" href="../plugins/highlight/monokai.css">
+    <link rel="stylesheet" href="../theme/lesson.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section data-background-color="#1E2EDE">
+                <h2 style="color: #fff; text-shadow: 2px 2px 2px rgb(31, 30, 30)">Waiting for learners to arrive</h2>
+                <img class="stretch" src="/assets/img/dancing_robot.gif" alt="">
+                <p>What other courses would you like me to teach?</p>
+            </section>
+
+            <section data-background-color="#ff914c" data-background-image="../assets/img/python-logo.png"
+                data-background-size="40%">
+                <h2>Become a Python Programmer</h2>
+                <h3>Day 8</h3>
+                <h4>The End</h4>
+            </section>
+
+            <section>
+                <section>
+                    <h2>Review</h2>
+                    <p>So far we've learned about</p>
+                    <ul>
+                        <li class="">values</li>
+                        <li class="">variables</li>
+                        <li class="">if statements</li>
+                        <li class="">loops</li>
+                        <li class="">lists</li>
+                        <li class="">dictionaries</li>
+                        <li class="">file input/output</li>
+                        <li class="">functions</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Functions Review</h3>
+                    <pre><code data-trim class="python" data-line-numbers="1-2|4-5">
+                        def say_hello(name):
+                            print("Hello, " + name)
+                        
+                        say_hello("Frank")
+                        say_hello("Nick")
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <img src="../assets/img/completely_different.webp" alt="Transition slide" class="stretch">
+            </section>
+
+            <section>
+                <h2>Extending Python</h2>
+                <h4>with packages</h4>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Why packages?</h3>
+                    <p>Many many many people use Python every day.</p>
+                    <p class="fragment">They have written Python code that can do things <em>you</em> probably want to
+                        do!</p>
+                    <p class="fragment">Python makes it easy for people to publish their code and others to use it.</p>
+                </section>
+
+                <section>
+                    <h3>Builtin Packages</h3>
+                    <p>Python gives you a lot to start with before you have to use other people's code!</p>
+                    <a href="https://docs.python.org/3/library/">The Python Standard Library</a>
+                </section>
+
+                <section>
+                    <h3>Examples</h3>
+                    <pre><code data-trim class="python">
+                        # time, datetime, and math are all packages built into Python!
+                        import time
+                        import datetime
+                        import math
+
+                        time.sleep(5)
+
+                        fact_5 = math.factorial(5)
+                        print(fact_5)
+
+                        now = datetime.datetime.now()
+                        print("Right now it is", now)
+                    </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>Using Other People's Packages</h3>
+                    <h4>Using pypi</h4>
+                </section>
+
+                <section>
+                    <h2>PyPi</h2>
+                    <a href="https://pypi.org/" target="_blank">
+                        <img src="/assets/img/pypi.PNG" alt="pypi homepage">
+                    </a>
+                </section>
+
+                <section>
+                    <h3>Packages</h3>
+                    <p>We can use code written by other programmers without knowing <em>how</em> it works.</p>
+                    <p class="fragment">We need the programmers to explain how to use it though!</p>
+                </section>
+
+                <section>
+                    <h3>My Packages</h3>
+                    <p>Back in high school, I published 2 Python packages for the world to use!</p>
+                    <p class="fragment">Although, they are only useful for a few people...</p>
+                    <a href="https://pypi.org/user/apexal/" class="fragment" target="_blank">PyPi profile</a>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h3>How to use Packages</h3>
+                    <h5>with pip</h5>
+                </section>
+
+                <section>
+                    <h4>PIP</h4>
+                    <p>PIP is a tool that usually comes with Python. It lets you install a package on your computer to
+                        use it.</p>
+                </section>
+
+                <section>
+                    <h3><a href="https://pypi.org/project/emoji/" target="_blank">Emoji</a> Package Example</h3>
+                    <p>Let's follow the <span class="keyword">documentation</span> for installing and using the
+                        <code>emoji</code> package.
+                    </p>
+                </section>
+            </section>
+
+            <section data-background-color="var(--information)">
+                <section>
+                    <h3>Thank you so much for joining!</h3>
+                </section>
+                <section>
+                    <p>This was my first major Outschool course so I was learning along with you!</p>
+                </section>
+                <section>
+                    <p>This was my first major Outschool course so I was learning along with you!</p>
+                </section>
+                <section>
+                    <p>Leave a review so I know how I did, and how I can improve!</p>
+                </section>
+                <section>
+                    <p>Follow my profile to be notified when I make new courses.</p>
+                </section>
+            </section>
+        </div>
+    </div>
+
+    <script src="../dist/reveal.js"></script>
+    <script src="../plugins/notes/notes.js"></script>
+    <script src="../plugins/highlight/highlight.js"></script>
+    <script>
+        // More info about initialization & config:
+        // - https://revealjs.com/initialization/
+        // - https://revealjs.com/config/
+        Reveal.initialize({
+            hash: true,
+            plugins: [RevealNotes, RevealHighlight]
+        });
+    </script>
+</body>
+
+</html>
